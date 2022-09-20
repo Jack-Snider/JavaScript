@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+
+        window.onload = function(){
+
+            var person = {
+                // static( 정적할당 )
+                name : 'Jack Snider',
+                age : 28,
+                coding : function(){
+                    console.log( 'Python is the best' )
+                    console.log( this.name );
+                }
+    
+            }
+            
+            // dynamic( 동적할당 )
+            person[ 'gender' ] = 'male';
+
+
+            document.getElementById( 'id' ).onclick = function(){
+                document.querySelector( '#head' ).innerHTML = '<strong>' + person + '</strong>';
+                console.log( person ); // {name: 'Jack Snider', age: 28, gender: 'male', coding: ƒ}
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1 id = 'head'>Jack Snider</h1>
+    <input id = 'id' type="button" value = 'click'>
+</body>
+</html>
