@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>setInterval Parice  - event by click button</title>
+</head>
+<body>
+    
+    <button id = "go">What time is it now?</button>
+    <h1><span class="badge bg-secondary" id="clock"></span></h1>
+
+
+    <script>
+
+        document.getElementById( "go" ).onclick = function(){
+
+            /*
+            getFullYear() – 주어진 날짜의 연도를 네 자리 숫자로 반환합니다
+            getMonth() – 주어진 날짜의 월 값을 나타내는 0에서 11 사이의 정수를 반환합니다
+            getDate() – 주어진 날짜의 일에 해당하는 1 이상 31 이하의 정수를 반환합니다
+            getHours() – 주어진 날짜의 시를 나타내는 0에서 23 사이의 정수를 반환합니다
+
+            */
+
+           
+           setInterval(() => {
+                let date = new Date();
+     
+                let year = date.getFullYear();
+                let month = date.getMonth();
+                let day = date.getDate();
+                let hour = date.getHours();
+                let minute = date.getMinutes();
+                let second = date.getSeconds();
+     
+     
+                let time =  year + "년 " + month + "월  " + day + "일  " + hour + "시 " + minute + "분 "  +   second  + "초";
+                document.getElementById( "clock" ).innerText = time;
+            }, 1000 );
+
+        }
+
+    </script>
+</body>
+</html>
