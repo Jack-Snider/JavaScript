@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+
+    </head>
+    <body>
+        <div id = "result"></div>
+        <script>
+            var contents = "";
+            var n = 1;
+            while( n <= 6 ){
+                if( n % 2 == 1 ){
+                    contents += "<img src = 'I:/github/JavaScript/images/apple.png'>"
+                }else{
+                    contents += "<img src = 'I:/github/JavaScript/images/django.jpg'>"
+                }
+                n++;
+            }
+            document.getElementById( "result" ).innerHTML = contents;
+        </script>
+    </body>
+</hmtl>
