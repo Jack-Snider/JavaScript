@@ -1,0 +1,23 @@
+<!--
+    제이쿼리 코드의 잘못된 적용 예
+
+    제이쿼리 코드가 <head>에 존재하는 경우 동작하지 않는다.
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script>
+            $( 'button' ).click( function(){
+                $( 'p' ).css( 'color', 'red' );
+            } );
+        </script>
+    </head>
+    <body>
+        <p>안녕하세요</p>
+        <p>반갑습니다</p>
+        <button>글자 색상 변경하기</button>
+    </body>
+</html>

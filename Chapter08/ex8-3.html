@@ -1,0 +1,44 @@
+<!--
+    $( document ).ready() 메소드 사용의 예
+    8-2의 잘못된 예를 방지하기 위해 위의 제이쿼리는 위의 메소드를 제공한다.
+
+    $( document ) : 페이지를 나타내는 제이쿼리 객체를 생성한다.
+    ready( function(){} ) : 페이지가 준비가 되었을 때 ready() 메소드안에 있는 함수가 실행된다.
+
+
+    $( document ).ready( function(){
+
+    } );
+
+    을 아래와 같이 축약하여 사용할 수 도 있다.
+
+    $( function(){
+
+    } );
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+            $( document ).ready( function(){
+                // 자바스크립트 코드
+                $( 'button' ).click( function(){
+                    $( 'p' ).css( 'color' , 'red' );
+                } );
+            } );
+        </script>
+
+    </head>
+    <body>
+        
+        <p>안녕하세요</p>
+        <p>반갑습니다</p>
+        <button>글자 색상 변경하기</button>
+
+    </body>
+</html>

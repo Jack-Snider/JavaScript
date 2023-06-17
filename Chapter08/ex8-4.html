@@ -1,0 +1,36 @@
+<!--
+    text()와 html() 메소드의 사용 예
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+            $( document ).ready( function(){
+                
+                $( '#btn1' ).click( function(){
+                    var content = $( '#box' ).text();
+                    alert( content );
+                } );
+
+                $( '#btn2' ).click( function(){
+                    var content = $( '#box' ).html();
+                    alert( content );
+                } );
+
+            } );
+        </script>
+
+    </head>
+    <body>
+        <div id = 'box'>
+            <h3>요소 내용 가져오기</h3>
+            <p>text()는 요소의 텍스트만 가져오고, html()은 HTML 태그도 같이 가져옵니다.</p>
+        </div>
+        <button id = 'btn1'>텍스트 가져오기</button>
+        <button id = 'btn2'>HTML 가져오기</button>
+    </body>
+</html>
