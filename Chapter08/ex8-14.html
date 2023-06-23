@@ -1,0 +1,49 @@
+<!--
+    removeClass() 메소드로 class 속성 삭제하기
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+
+            $( document ).ready( function(){
+
+                $( '#btn' ).click( function(){
+                    $( 'h2' ).removeClass( 'pink' ); // 클래스 이름
+                } )
+
+            } );
+            
+        </script>
+
+        <style>
+
+            .pink{
+                background-color: pink;
+                color: white;
+            }
+
+            .green{
+                background-color: green;
+                color: white;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        
+        <h2 class = "pink">제목1</h2>
+        <p class = "green">단락1</p>
+
+        <h2 class = "pink">제목2</h2>
+        <p class = "green">단락2</p>
+
+        <button id = "btn">pink 클래스 삭제하기</button>
+
+    </body>
+</html>
