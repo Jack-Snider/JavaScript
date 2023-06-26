@@ -1,0 +1,34 @@
+<!--
+
+    전체 선택자 사용 예
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+
+            $( document ).ready( function(){
+
+                $( '*' ).css( 'border', 'solid 1px blue' );
+
+            } );
+            
+        </script>
+
+    </head>
+    <body>
+        
+        <h2>전체 선택자</h2>
+        <p>전체 선택자는 페이지의 해당 요소를 선택한다.</p>
+        <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+        </ul>
+
+    </body>
+</html>
