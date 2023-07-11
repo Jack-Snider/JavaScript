@@ -1,7 +1,7 @@
 <!--
-    자식 선택자의 사용 예
+    후손 선택자의 사용 예
 
-    $( "div > span" )은 div 태그 바로 아래에 있는 span태그들만 선택한다.
+    $( "div span" )은 페이지의 <div> 요소에 존재하는 모든 <span> 요소를 선택
 
 -->
 <html lang="en">
@@ -14,20 +14,16 @@
         <script>
 
             $( document ).ready( function(){
-                $( "div > span" ).css( 
-                        { 
-                            "background-color" : "yellow" ,
-                            "font-weight" : "bold"
-                        }
-                    );
+                $( 'div span' ).css(
+                    {
+                        "background-color" : "pink",
+                        "font-weight" : "bold"
+                    }
+                )
             } );
             
         </script>
-        <style>
-            div{
-                border: solid 1px blue;
-            }
-        </style>
+
     </head>
     <body>
         <div>
@@ -38,11 +34,11 @@
         </div>
         <div>
             <h2>h2 요소( 자식 )</h2>
-            <p>p 요소( 자식 )
-                <span>span 요소( 후손 )</span>
+            <p>p요소( 자식 )
                 <span>span 요소( 후손 )</span>
                 <span>span 요소( 후손 )</span>
             </p>
+            <p>p 요소( 자식 )</p>
         </div>
     </body>
 </html>
