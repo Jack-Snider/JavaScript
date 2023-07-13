@@ -1,8 +1,7 @@
 <!--
-    :eq( index ) 필터의 사용 예
+    :first 필터와 :last필터의 사용 예
 
-    $( "div li:eq( 0 )" )는 <div> 요소의 후손인 <li> 요소 중에서 인덱스 0인 요소
-    즉, 첫 번째 요소를 선택
+    $( "div li:first" )는 <div> 요소의 후손인 <li> 요소 중 첫 번째 선택
 
 -->
 <html lang="en">
@@ -15,16 +14,19 @@
         <script>
 
             $( document ).ready( function(){
-                $( "div li:eq( 0 )" ).css( "background-color", "yellow" );
-                $( "div li:eq( 3 )" ).css( "background-color", "pink" );
+                
+                $( "div li:first" ).css( "border", "solid 2px red" );
+                $( "div li:last" ).css( "border", "solid 2px blue" );
+
             } );
             
         </script>
 
     </head>
     <body>
+        
         <div>
-            <h2>:eq( index ) 필터</h2>
+            <h2>:first/:last필터</h2>
             <ul>
                 <li>항목 1</li>
                 <li>항목 2</li>
@@ -33,5 +35,6 @@
                 <li>항목 5</li>
             </ul>
         </div>
+
     </body>
 </html>
