@@ -1,0 +1,38 @@
+<!--
+    parent() 메소드의 사용 예
+
+    $(선택자).parent() : 선택된 해당 요소의 부모요소를 선택
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+
+            $(document).ready(function(){
+                $("span").parent().css("border", "solid 2px green");
+                $("li").parent().css("border","solid 2px blue");
+                $("ul").parent().css("border","solid 2px red");
+            } );
+            
+        </script>
+
+    </head>
+    <body>
+        <h2>parent() 메소드</h2>
+        <div>
+            <ul>
+                <li>항목 1</li>
+                <li><span>항목2(span 요소)</span></li>
+            </ul>
+            <ul>
+                <li>항목 1</li>
+                <li>항목 2</li>
+            </ul>
+        </div>
+    </body>
+</html>

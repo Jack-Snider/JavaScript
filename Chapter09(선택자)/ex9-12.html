@@ -1,0 +1,50 @@
+<!--
+    :first-child / :last-child 필터의 사용 예
+    
+    $( "li:first-child" )
+    는 <li> 요소의 부모, <ul> 요소의 자식 <li>요소 중에서 첫 번째 요소를 선택한다.
+
+    $( "li:last-child" )
+    는 <li> 요소의 부모, <ul> 요소의 자식 <li>요소 중에서 마지막 요소를 선택한다.
+
+    $( "li:first" )
+    각 페이지에 첫 번째 <li> 요소 선택
+
+    $( "li:last" )
+    각 페이지에 마지막 <li> 요소 선택
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+
+            $( document ).ready( function(){
+                $( "li:first-child" ).css( "background-color", "yellow" );
+                $( "li:last-child" ).css( "background-color", "pink" );
+
+                $( "li:first" ).css( "border", "solid 2px red" );
+                $( "li:last" ).css( "border", "solid 2px black" );
+            } );
+            
+        </script>
+
+    </head>
+    <body>
+        <h2>:first-child/:last-child 필터</h2>
+        <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+        </ul>
+        <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!--
+    폼 필터의 사용 예
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+        <script>
+
+            $( document ).ready( function(){
+
+                $( ":text, :password" ).css( "border", "solid 1px pink" );
+
+                $( ":button" ).css(
+                    {
+                        "background-color" : "yellow",
+                        "border" : "solid 1px black"
+                    }
+                );
+
+                $( ":submit, :reset" ).css(
+                    {
+                        "background-color" : "pink",
+                        "border" : "solid 1px black"
+                    }
+                );
+
+                $( ":radio, :checkbox" ).wrap(
+                    "<span style = 'background-color : yellow'></span>"
+                );
+
+                $( "input:checked" ).wrap(
+                    "<span style = 'background-color : red'></span>"
+                );
+
+                $( "option:selected" ).css( "background-color", "red" );
+
+            } );
+            
+        </script>
+
+    </head>
+    <body>
+        <h2>회원 가입 양식</h2>
+        <form action="">
+            <ul>
+                <li>
+                    아이디 : <input type="text">
+                    <input type="button" value = "아이디 중복 체크">
+                </li>
+                <li>
+                    이름 : <input type="text">
+                </li>
+                <li>
+                    비밀번호 : <input type="password">
+                </li>
+                <li>
+                    이메일 : <input type="text">@
+                    <select>
+                        <option value="naver">naver.com</option>
+                        <option value="hanmail">hanmail.com</option>
+                        <option value="gmail">gmail.com</option>
+                    </select>
+                </li>
+                <li>
+                    성별 : <input type="radio" name = "gender">
+                    남성 : <input type="radio" name = "gender" checked>
+                </li>
+                <li>
+                    가입경로 : <input type="checkbox" name = "h1" checked>인
+
+                    <input type="checkbox" name = "h2">친구
+                    <input type="checkbox" name = "h3" checked>기타
+                </li>
+            </ul>
+            <div>
+                <input type="submit" value = "제출하기">
+                <input type="reset"  value = "입력취소">
+            </div>
+        </form>
+    </body>
+</html>
