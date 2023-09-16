@@ -1,5 +1,5 @@
 <!--
-
+    클릭 이벤트 사용 예
 -->
 <html lang="en">
     <head>
@@ -8,17 +8,19 @@
         <title>Document</title>
         <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
-
         <script>
 
-            $( document ).ready( function(){
-
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#show").text("안녕하세요.");
+                })
             } );
             
         </script>
 
     </head>
     <body>
-        
+        <button id = "btn">클릭!</button>
+        <p id = "show"></p>
     </body>
 </html>
