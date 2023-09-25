@@ -6,13 +6,23 @@
     <title>Hungry Developer</title>
 </head>
 <body>
+
+    <div id="myElement" class="box active">클릭하세요</div>
+
     <script>
         window.onload = function(){
-            let member_info = {name:"Jack", age:29, hobby:"PUBG"}; // Key:Value
+            // JavaScript 코드
+            const myElement = document.getElementById("myElement");
 
-            document.write("<h1>" + member_info.name + "</h1>");   
-            document.write("<h1>" + member_info.age + "</h1>");   
-            document.write("<h1>" + member_info.hobby + "</h1>");
+            myElement.addEventListener("click", function(event) {
+                if (event.target.classList.contains("active")) {
+                        // "active" 클래스가 해당 요소의 클래스 목록에 포함되어 있는 경우 실행
+                        console.log("클래스에 'active'가 포함되어 있습니다.");
+                } else {
+                        // "active" 클래스가 해당 요소의 클래스 목록에 포함되어 있지 않은 경우 실행
+                        console.log("클래스에 'active'가 포함되어 있지 않습니다.");
+                }
+            });
         }
     </script>
 </body>
